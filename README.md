@@ -19,7 +19,7 @@
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://technix-crm.com) · [Documentation](https://docs.technix-crm.com) · [Report Bug](https://github.com/yourusername/technix-crm/issues)
+[Live Demo](https://technix-crm.netlify.app) · [Documentation](https://docs.technix-crm.com) · [Report Bug](https://github.com/yourusername/technix-crm/issues)
 
 ---
 
