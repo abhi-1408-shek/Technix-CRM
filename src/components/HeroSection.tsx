@@ -1,11 +1,29 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart, Zap, Users, CheckCircle } from 'lucide-react';
+import { ArrowRight, BarChart, Zap, Users, CheckCircle, Shield, Building, Indian } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
+  // Dynamic highlights for the hero section
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const highlights = [
+    "Transform customer engagement",
+    "Boost sales productivity",
+    "Streamline business operations",
+    "Enhance client relationships"
+  ];
+
+  // Cycle through highlights
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHighlightIndex((prev) => (prev + 1) % highlights.length);
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   // Particle animation
   useEffect(() => {
     const createParticles = () => {
@@ -82,9 +100,10 @@ const HeroSection = () => {
       {/* Particle animation container */}
       <div className="hero-particles absolute inset-0 z-0"></div>
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-1/3 h-1/3 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-brand-orange/10 rounded-full blur-3xl"></div>
+      {/* Decorative elements with Indian flag colors */}
+      <div className="absolute top-20 right-0 w-1/3 h-1/3 bg-[#FF9933]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#138808]/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/3 w-1/4 h-1/4 bg-[#000080]/5 rounded-full blur-2xl"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
@@ -104,15 +123,31 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Transform Your <span className="text-gradient">Customer Relationships</span>
+              India's Premier <span className="text-gradient">CRM Solution</span>
             </motion.h1>
+            
+            <motion.div
+              className="mt-4 h-12 overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              <div className="relative transition-all duration-500" style={{ transform: `translateY(-${highlightIndex * 3}rem)` }}>
+                {highlights.map((highlight, index) => (
+                  <div key={index} className="h-12 text-2xl md:text-3xl font-semibold text-brand-blue dark:text-brand-blue-light">
+                    {highlight}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
             <motion.p 
               className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Technix-CRM empowers businesses to streamline lead management, boost sales, and deliver exceptional customer service all in one platform.
+              Technix-CRM empowers Indian businesses to streamline lead management, boost sales, and deliver exceptional customer service all in one platform.
             </motion.p>
             
             <motion.div 
@@ -149,7 +184,7 @@ const HeroSection = () => {
               initial="hidden"
               animate="visible"
             >
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">Trusted by 10,000+ businesses</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">Trusted by 5,000+ Indian businesses</p>
               <div className="grid grid-cols-3 gap-4">
                 {features.map((feature, index) => (
                   <motion.div 
@@ -179,10 +214,10 @@ const HeroSection = () => {
             }}
           >
             <div className="relative z-10 rounded-xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue to-brand-orange"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808]"></div>
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" 
-                alt="Technix-CRM Dashboard" 
+                src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=1200&q=80" 
+                alt="Technix-CRM Dashboard with Indian business data" 
                 className="w-full h-auto"
               />
               
@@ -196,9 +231,9 @@ const HeroSection = () => {
               </motion.div>
             </div>
             
-            {/* Accent elements */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-orange/20 dark:bg-brand-orange/10 rounded-full blur-2xl"></div>
+            {/* Accent elements with Indian flag colors */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#FF9933]/20 dark:bg-[#FF9933]/10 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#138808]/20 dark:bg-[#138808]/10 rounded-full blur-2xl"></div>
             
             {/* Floating elements */}
             <motion.div 

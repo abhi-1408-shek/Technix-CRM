@@ -35,11 +35,11 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300 overflow-x-hidden">
       <Header />
       
-      {/* Background gradients */}
+      {/* Background gradients with Indian flag colors */}
       <div className="fixed inset-0 z-[-1] pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brand-blue/10 dark:bg-brand-blue/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-brand-orange/10 dark:bg-brand-orange/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-purple-500/5 dark:bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#FF9933]/10 dark:bg-[#FF9933]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#138808]/10 dark:bg-[#138808]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-[#000080]/5 dark:bg-[#000080]/5 rounded-full blur-3xl"></div>
       </div>
       
       <main>
@@ -71,15 +71,15 @@ const Index = () => {
       {/* Floating components */}
       <AchievementBadges />
       
-      {/* Add the progress indicator */}
+      {/* Add the progress indicator with Indian flag colors */}
       <motion.div
         className="fixed bottom-4 left-4 z-50 flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-full shadow-lg px-3 py-1.5"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
       >
-        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Exploring Technix-CRM</span>
+        <div className="w-2 h-2 rounded-full bg-[#138808] animate-pulse"></div>
+        <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Exploring Technix-CRM India</span>
       </motion.div>
     </div>
   );

@@ -23,6 +23,7 @@ const DemoFormSection = () => {
     company: '',
     phoneNumber: '',
     companySize: '',
+    industry: '',
     message: ''
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -41,14 +42,14 @@ const DemoFormSection = () => {
     }
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData(prev => ({ ...prev, companySize: value }));
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
     
     // Clear error when field is edited
-    if (errors.companySize) {
+    if (errors[name]) {
       setErrors(prev => {
         const newErrors = { ...prev };
-        delete newErrors.companySize;
+        delete newErrors[name];
         return newErrors;
       });
     }
@@ -68,6 +69,14 @@ const DemoFormSection = () => {
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     
     if (!formData.companySize) newErrors.companySize = 'Company size is required';
+    
+    if (!formData.industry) newErrors.industry = 'Industry is required';
+    
+    if (!formData.phoneNumber.trim()) {
+      newErrors.phoneNumber = 'Phone number is required';
+    } else if (!/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/.test(formData.phoneNumber.replace(/[\s-]/g, ''))) {
+      newErrors.phoneNumber = 'Please enter a valid Indian phone number';
+    }
     
     if (!formData.message.trim()) newErrors.message = 'Please provide some details about your needs';
     
@@ -100,6 +109,7 @@ const DemoFormSection = () => {
         company: '',
         phoneNumber: '',
         companySize: '',
+        industry: '',
         message: ''
       });
     } catch (error) {
@@ -114,13 +124,28 @@ const DemoFormSection = () => {
     }
   };
 
+  const industries = [
+    "IT & Software Services",
+    "Healthcare & Pharmaceuticals",
+    "Banking & Financial Services",
+    "Manufacturing",
+    "Retail & E-commerce",
+    "Education & Training",
+    "Media & Entertainment",
+    "Real Estate & Construction",
+    "Travel & Hospitality",
+    "Consulting & Professional Services",
+    "Telecommunications",
+    "Other"
+  ];
+
   return (
-    <section id="demo" className="py-20 bg-brand-blue text-white">
+    <section id="demo" className="py-20 bg-gradient-to-r from-[#0ea5e9] to-[#1e40af] text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Ready to Transform Your Customer Relationships?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto text-center mb-12">
-            Schedule a personalized demo with our product specialists and discover how Technix-CRM can help your business grow.
+            Schedule a personalized demo with our product specialists and discover how Technix-CRM can help your business grow in the Indian market.
           </p>
           
           <div className="bg-white rounded-xl shadow-xl p-8">
@@ -136,7 +161,7 @@ const DemoFormSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className={errors.name ? "border-red-500" : ""}
-                    placeholder="John Doe"
+                    placeholder="Rajesh Kumar"
                   />
                   {errors.name && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
@@ -154,7 +179,7 @@ const DemoFormSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className={errors.email ? "border-red-500" : ""}
-                    placeholder="john@company.com"
+                    placeholder="rajesh@company.in"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
@@ -171,7 +196,7 @@ const DemoFormSection = () => {
                     value={formData.company}
                     onChange={handleChange}
                     className={errors.company ? "border-red-500" : ""}
-                    placeholder="Acme Inc."
+                    placeholder="Innovate Solutions Pvt. Ltd."
                   />
                   {errors.company && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
@@ -181,19 +206,25 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="phoneNumber" className="text-gray-700">Phone Number</Label>
+                  <Label htmlFor="phoneNumber" className="text-gray-700">Phone Number *</Label>
                   <Input
                     id="phoneNumber"
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    placeholder="+1 (123) 456-7890"
+                    className={errors.phoneNumber ? "border-red-500" : ""}
+                    placeholder="+91 98765 43210"
                   />
+                  {errors.phoneNumber && (
+                    <p className="text-red-500 text-sm flex items-center mt-1">
+                      <AlertCircle className="w-4 h-4 mr-1" /> {errors.phoneNumber}
+                    </p>
+                  )}
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="companySize" className="text-gray-700">Company Size *</Label>
-                  <Select onValueChange={handleSelectChange} value={formData.companySize}>
+                  <Select onValueChange={(value) => handleSelectChange('companySize', value)} value={formData.companySize}>
                     <SelectTrigger className={errors.companySize ? "border-red-500" : ""}>
                       <SelectValue placeholder="Select company size" />
                     </SelectTrigger>
@@ -208,6 +239,25 @@ const DemoFormSection = () => {
                   {errors.companySize && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.companySize}
+                    </p>
+                  )}
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="industry" className="text-gray-700">Industry *</Label>
+                  <Select onValueChange={(value) => handleSelectChange('industry', value)} value={formData.industry}>
+                    <SelectTrigger className={errors.industry ? "border-red-500" : ""}>
+                      <SelectValue placeholder="Select your industry" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {industries.map((industry) => (
+                        <SelectItem key={industry} value={industry}>{industry}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.industry && (
+                    <p className="text-red-500 text-sm flex items-center mt-1">
+                      <AlertCircle className="w-4 h-4 mr-1" /> {errors.industry}
                     </p>
                   )}
                 </div>
@@ -228,6 +278,11 @@ const DemoFormSection = () => {
                     </p>
                   )}
                 </div>
+              </div>
+              
+              <div className="flex items-center space-x-2 text-sm text-gray-500">
+                <CheckCircle className="h-4 w-4 text-brand-blue" />
+                <span>Your data is secure and will never be shared with third parties.</span>
               </div>
               
               <div className="flex justify-center md:justify-end mt-6">

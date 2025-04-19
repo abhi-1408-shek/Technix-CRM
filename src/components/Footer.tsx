@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Github, Heart } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Github, Heart, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white dark:bg-gray-950 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl"></div>
+      {/* Decorative Elements with Indian flag colors */}
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FF9933]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#138808]/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 pt-16 pb-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -31,9 +31,9 @@ const Footer = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h3 className="text-2xl font-bold mb-6">Technix<span className="text-brand-orange">CRM</span></h3>
+            <h3 className="text-2xl font-bold mb-6">Technix<span className="text-[#FF9933]">CRM</span></h3>
             <p className="text-gray-400 mb-6">
-              Empowering businesses to build stronger customer relationships through innovative CRM solutions.
+              Empowering Indian businesses to build stronger customer relationships through innovative CRM solutions.
             </p>
             <div className="flex space-x-4">
               <motion.a 
@@ -120,11 +120,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Mail size={18} className="mr-3" />
-                <a href="mailto:support@technixcrm.com">support@technixcrm.com</a>
+                <a href="mailto:support@technixcrm.in">support@technixcrm.in</a>
               </li>
               <li className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Phone size={18} className="mr-3" />
-                <a href="tel:+18001234567">+1 (800) 123-4567</a>
+                <a href="tel:+911140506070">+91 11 4050 6070</a>
+              </li>
+              <li className="flex items-start text-gray-400 hover:text-white transition-colors">
+                <MapPin size={18} className="mr-3 mt-1" />
+                <span>
+                  Technix Tower, Block B<br />
+                  Cyber City, Gurugram<br />
+                  Haryana 122002, India
+                </span>
               </li>
             </ul>
           </motion.div>
@@ -143,7 +151,7 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Engineered by Abhishek */}
+        {/* Engineered by Info */}
         <motion.div 
           className="mt-8 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -158,16 +166,10 @@ const Footer = () => {
           >
             <span className="text-gray-300 text-sm mr-2">Engineered with</span>
             <Heart size={14} className="text-red-500 mx-1 animate-pulse" fill="currentColor" />
-            <span className="text-gray-300 text-sm mr-1">by</span>
-            <a 
-              href="https://github.com/abhishek" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-brand-orange font-semibold inline-flex items-center"
-            >
-              Abhishek
-              <Github size={14} className="ml-1 opacity-70" />
-            </a>
+            <span className="text-gray-300 text-sm mr-1">in</span>
+            <span className="text-[#FF9933] font-semibold inline-flex items-center">
+              India
+            </span>
           </motion.div>
         </motion.div>
       </div>

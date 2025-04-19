@@ -8,7 +8,10 @@ import {
   Settings, 
   Calendar, 
   Zap,
-  ArrowRight
+  ArrowRight,
+  Shield,
+  Globe,
+  Building
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -18,37 +21,37 @@ const features = [
     icon: <Users size={24} />,
     color: 'bg-blue-500',
     title: 'Lead Management',
-    description: 'Capture, track and nurture leads through your sales pipeline with powerful automation tools.'
+    description: 'Capture, track and nurture leads through your sales pipeline with powerful automation tools optimized for Indian businesses.'
   },
   {
     icon: <BarChart size={24} />,
     color: 'bg-indigo-500',
     title: 'Sales Analytics',
-    description: 'Gain actionable insights with comprehensive reports and dashboards to optimize your sales strategy.'
+    description: 'Gain actionable insights with comprehensive reports and dashboards to optimize your sales strategy across all Indian states.'
   },
   {
     icon: <MessageSquare size={24} />,
     color: 'bg-purple-500',
     title: 'Customer Engagement',
-    description: 'Build stronger relationships with integrated communication tools and interaction history.'
+    description: 'Build stronger relationships with integrated communication tools supporting all major Indian languages and regional preferences.'
   },
   {
     icon: <Settings size={24} />,
     color: 'bg-brand-orange',
     title: 'Customizable Workflows',
-    description: 'Tailor processes and automation to match your unique business requirements and objectives.'
+    description: 'Tailor processes and automation to match your unique business requirements in the dynamic Indian market.'
   },
   {
     icon: <Calendar size={24} />,
     color: 'bg-green-500',
     title: 'Task Management',
-    description: 'Stay organized with calendars, reminders, and task assignments for your entire team.'
+    description: 'Stay organized with calendars that recognize Indian holidays, reminders, and task assignments for your entire team.'
   },
   {
-    icon: <Zap size={24} />,
+    icon: <Globe size={24} />,
     color: 'bg-red-500',
     title: 'Integration Ecosystem',
-    description: 'Connect seamlessly with your favorite tools and services for a unified workflow.'
+    description: 'Connect seamlessly with popular Indian payment gateways, business tools and services for a unified workflow.'
   }
 ];
 
@@ -91,9 +94,9 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Powerful Features to Grow Your Business</h2>
+          <h2 className="section-title">Powerful Features to Transform Your Business</h2>
           <p className="section-subtitle">
-            Discover how Technix-CRM can transform your customer relationships and accelerate your sales process
+            Discover how Technix-CRM can revolutionize your customer relationships and accelerate your sales process for the Indian market
           </p>
         </motion.div>
 
