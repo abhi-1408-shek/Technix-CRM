@@ -8,7 +8,7 @@
 > Transform your customer relationships with a visually stunning, AI-powered CRM platform designed for the next generation of Indian enterprises.
 
 
-<img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" alt="Technix-CRM Banner" width="100%" style="border-radius: 10px;">
+<img src="images/crm-main.png" alt="Technix-CRM Banner" width="100%" style="border-radius: 10px;">
 
 ### Transform Your Customer Relationships with Modern CRM Solutions
 
@@ -19,66 +19,21 @@
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://technix-crm.netlify.app) · [Documentation](https://docs.technix-crm.com) · [Report Bug](https://github.com/yourusername/technix-crm/issues)
+[Live Demo](https://technix-crm.netlify.app) · [Documentation](https://docs.technix-crm.com) · [Report Bug](https://github.com/abhi-1408-shek/Technix-CRM/issues)
 
 ---
 
 ## 🖼️ Project Screenshot
 
 <div align="center">
-  <img src="./screenshot.png" alt="Technix-CRM Screenshot" width="80%" style="border-radius: 10px; box-shadow: 0 4px 24px #0002; margin: 24px 0;" />
+  <img src="images/site.png" alt="Technix-CRM Screenshot" width="80%" style="border-radius: 10px; box-shadow: 0 4px 24px #0002; margin: 24px 0;" />
   <br/>
-  <em>Add your own screenshot here for maximum LinkedIn impact!</em>
 </div>
 
 ---
 
 </div>
 
-## ✨ Key Features
-
-<table>
-<tr>
-<td width="50%">
-
-### 🎯 Intelligent Lead Management
-- Smart lead scoring & prioritization
-- Automated lead distribution
-- Real-time pipeline visualization
-- Custom qualification criteria
-
-</td>
-<td width="50%">
-
-### 📊 Advanced Analytics
-- Interactive dashboards
-- Predictive sales forecasting
-- Custom report builder
-- Data-driven insights
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔄 Workflow Automation
-- Visual workflow builder
-- Trigger-based actions
-- Multi-step automations
-- Integration capabilities
-
-</td>
-<td width="50%">
-
-### 💬 Customer Engagement
-- Multi-channel communication
-- Automated follow-ups
-- Sentiment analysis
-- Engagement tracking
-
-</td>
-</tr>
-</table>
 
 ## 🛠️ Tech Stack
 
@@ -112,7 +67,7 @@
 1. **Clone the repository**
    \`\`\`bash
    git clone https://github.com/abhi-1408-shek/Technix-CRM.git
-   cd technix-crm
+   cd Technix-CRM
    \`\`\`
 
 2. **Install dependencies**
@@ -128,7 +83,7 @@
 ## 📱 Preview
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" alt="Technix-CRM Dashboard" width="80%" style="border-radius: 8px;">
+  <img src="images/PREVIEW.png" alt="Technix-CRM Dashboard" width="80%" style="border-radius: 8px;">
 </div>
 
 ## 🌟 Core Features
