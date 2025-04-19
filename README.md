@@ -48,7 +48,7 @@
 
 | 📱 Mobile View | 🖥️ Dashboard | 📊 Analytics |
 |:---:|:---:|:---:|
-| <img src="images/mobile.png" alt="Mobile" width="250" style="border-radius: 10px;"> | <img src="images/dashboard.png" alt="Dashboard" width="400" style="border-radius: 10px;"> | <img src="images/analytics.png" alt="Analytics" width="400" style="border-radius: 10px;"> |
+| <img src="images/phone.png" alt="Mobile" width="250" style="border-radius: 10px;"> | <img src="images/PREVIEW.png" alt="Dashboard" width="400" style="border-radius: 10px;"> | <img src="images/lighthouse.png" alt="Analytics" width="400" style="border-radius: 10px;"> |
 
 </details>
 
