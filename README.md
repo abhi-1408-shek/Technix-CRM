@@ -84,23 +84,23 @@
 </tr>
 <tr>
   <td align="center" width="96">
-    <img src="https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg" alt="Zustand" width="48" height="48" />
+    <img src="https://img.shields.io/badge/-Zustand-593D88?style=flat-square&logo=zustand&logoColor=white" alt="Zustand" width="48" height="48" />
     <br>Zustand
   </td>
   <td align="center" width="96">
-    <img src="https://www.svgrepo.com/show/373845/motion.svg" alt="Framer" width="48" height="48" />
+    <img src="https://framerusercontent.com/images/48ha9ZR9oZQGQ6gZ8YUfElP3T0.png" alt="Framer" width="48" height="48" />
     <br>Framer
   </td>
   <td align="center" width="96">
-    <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="TanStack" width="48" height="48" />
+    <img src="https://img.shields.io/badge/-TanStack-FF4154?style=flat-square&logo=react-query&logoColor=white" alt="TanStack" width="48" height="48" />
     <br>TanStack
   </td>
   <td align="center" width="96">
-    <img src="https://www.svgrepo.com/show/374167/recharts.svg" alt="Recharts" width="48" height="48" />
+    <img src="https://api.iconify.design/logos/recharts.svg" alt="Recharts" width="48" height="48" />
     <br>Recharts
   </td>
   <td align="center" width="96">
-    <img src="https://www.svgrepo.com/show/373629/jest.svg" alt="Jest" width="48" height="48" />
+    <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="Jest" width="48" height="48" />
     <br>Jest
   </td>
 </tr>
