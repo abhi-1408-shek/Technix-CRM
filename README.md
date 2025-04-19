@@ -130,6 +130,7 @@
 </tr>
 <tr>
   
+  <td>
     <img src="https://img.shields.io/badge/🔒_Security-Enterprise_Grade-4CAF50?style=for-the-badge" alt="Security" />
     <br>
     Your data, always protected
