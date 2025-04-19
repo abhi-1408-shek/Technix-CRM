@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';
@@ -7,7 +6,6 @@ import BenefitsSection from '../components/BenefitsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import DemoFormSection from '../components/DemoFormSection';
 import Footer from '../components/Footer';
-import ProductTour from '../components/ProductTour';
 import WorkflowBuilder from '../components/WorkflowBuilder';
 import AchievementBadges from '../components/AchievementBadges';
 import WebARDemo from '../components/WebARDemo';
@@ -15,16 +13,9 @@ import { motion } from 'framer-motion';
 import { initPersonalization } from '../utils/contentPersonalizer';
 
 const Index = () => {
-  const [isFirstVisit, setIsFirstVisit] = useState(false);
-  
   useEffect(() => {
     // Initialize content personalization
     initPersonalization();
-    
-    // Determine if this is the first visit
-    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore') === 'true';
-    setIsFirstVisit(!hasVisitedBefore);
-    localStorage.setItem('hasVisitedBefore', 'true');
     
     // Smooth scroll to hash on load
     if (window.location.hash) {
@@ -37,48 +28,7 @@ const Index = () => {
     
     // Reset scroll position on load
     window.scrollTo(0, 0);
-    
-    // Add particles effect to background
-    const createParticles = () => {
-      const container = document.createElement('div');
-      container.className = 'fixed inset-0 pointer-events-none z-0';
-      document.body.appendChild(container);
-      
-      for (let i = 0; i < 100; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'absolute rounded-full bg-brand-blue/5 dark:bg-brand-blue-light/5';
-        
-        // Random properties
-        const size = Math.random() * 10 + 2;
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100;
-        const duration = Math.random() * 120 + 60;
-        const delay = Math.random() * 10;
-        
-        // Apply styles
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${posX}%`;
-        particle.style.top = `${posY}%`;
-        particle.style.animation = `float ${duration}s ${delay}s infinite ease-in-out`;
-        
-        container.appendChild(particle);
-      }
-    };
-    
-    createParticles();
-    
-    // Clean up on unmount
-    return () => {
-      const particleContainer = document.querySelector('.fixed.inset-0.pointer-events-none');
-      if (particleContainer) {
-        document.body.removeChild(particleContainer);
-      }
-    };
   }, []);
-
-  // Show product tour if it's the first visit
-  const shouldShowTour = isFirstVisit;
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300 overflow-x-hidden">
@@ -118,7 +68,6 @@ const Index = () => {
       <Footer />
       
       {/* Floating components */}
-      {shouldShowTour && <ProductTour />}
       <AchievementBadges />
       
       {/* Add the progress indicator */}
@@ -131,9 +80,6 @@ const Index = () => {
         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
         <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Exploring Technix-CRM</span>
       </motion.div>
-      
-      {/* Add futuristic interactive cursor */}
-      <div id="cursor-follower" className="fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference opacity-0"></div>
     </div>
   );
 };

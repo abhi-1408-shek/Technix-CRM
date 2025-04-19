@@ -12,6 +12,8 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
+import Documentation from "./pages/resources/Documentation";
+import ApiDocs from "./pages/resources/ApiDocs";
 import Login from "./pages/Login";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/resources/documentation" element={<Documentation />} />
+            <Route path="/resources/api-docs" element={<ApiDocs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
