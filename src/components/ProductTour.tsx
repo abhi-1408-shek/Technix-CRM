@@ -15,6 +15,19 @@ const ProductTour = () => {
       return;
     }
 
+    // Add specific styles to ensure cursor remains visible over tour elements
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .shepherd-element {
+        z-index: 99999 !important;
+        position: relative;
+      }
+      .shepherd-modal-overlay-container {
+        z-index: 99998 !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     // Initialize the tour
     const tour = new Shepherd.Tour({
       defaultStepOptions: {
@@ -130,6 +143,7 @@ const ProductTour = () => {
 
     return () => {
       tour.complete();
+      document.head.removeChild(style);
     };
   }, []);
 
