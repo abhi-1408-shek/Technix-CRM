@@ -67,19 +67,19 @@ const Contact = () => {
     {
       icon: <Phone className="text-brand-blue dark:text-brand-blue-light" />,
       title: "Call Us",
-      content: "+1 (800) 123-4567",
-      link: "tel:+18001234567"
+      content: "+91-123456789",
+      link: "tel:+91-123456789"
     },
     {
       icon: <MapPin className="text-brand-blue dark:text-brand-blue-light" />,
       title: "Visit Us",
-      content: "123 Tech Park, San Francisco, CA 94107",
+      content: "Karol Bagh,New Delhi, Delhi",
       link: "https://maps.google.com"
     },
     {
       icon: <Clock className="text-brand-blue dark:text-brand-blue-light" />,
       title: "Business Hours",
-      content: "Monday-Friday: 9am-6pm PST",
+      content: "Monday-Friday: 9am-6pm IST",
       link: null
     }
   ];
