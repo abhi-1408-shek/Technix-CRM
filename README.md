@@ -134,12 +134,7 @@
   </td>
 </tr>
 <tr>
-  <td>
-    <img src="https://img.shields.io/badge/💬_Engagement-Multi_Channel-FFA629?style=for-the-badge" alt="Engagement" />
-    <br>
-    Email, WhatsApp, SMS integration
-  </td>
-  <td>
+  
     <img src="https://img.shields.io/badge/🔒_Security-Enterprise_Grade-4CAF50?style=for-the-badge" alt="Security" />
     <br>
     Your data, always protected
