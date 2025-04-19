@@ -11,27 +11,27 @@ const About = () => {
 
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "PERSON-1",
       position: "CEO & Founder",
-      bio: "With over 15 years of experience in SaaS and CRM solutions, Sarah founded Technix-CRM to help businesses build stronger customer relationships.",
+      bio: "With over 15 years of experience in SaaS and CRM solutions, PERSON-1 founded Technix-CRM to help businesses build stronger customer relationships.",
       image: "https://randomuser.me/api/portraits/women/32.jpg"
     },
     {
-      name: "Michael Chen",
+      name: "PERSON-2",
       position: "CTO",
-      bio: "Michael leads our technology team, focusing on building a scalable, secure, and innovative CRM platform that meets the evolving needs of our customers.",
+      bio: "PERSON-2 leads our technology team, focusing on building a scalable, secure, and innovative CRM platform that meets the evolving needs of our customers.",
       image: "https://randomuser.me/api/portraits/men/15.jpg"
     },
     {
-      name: "Emily Rodriguez",
+      name: "PERSON-3",
       position: "Head of Product",
-      bio: "Emily ensures that Technix-CRM delivers an exceptional user experience while continually adding features that drive business value for our clients.",
+      bio: "PERSON-3 ensures that Technix-CRM delivers an exceptional user experience while continually adding features that drive business value for our clients.",
       image: "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
-      name: "David Wilson",
+      name: "PERSON-4",
       position: "Customer Success Director",
-      bio: "David leads our customer success team, ensuring that every client gets maximum value from our platform through dedicated support and training.",
+      bio: "PERSON-4 leads our customer success team, ensuring that every client gets maximum value from our platform through dedicated support and training.",
       image: "https://randomuser.me/api/portraits/men/23.jpg"
     }
   ];
@@ -91,7 +91,7 @@ const About = () => {
                     Founded in 2018, Technix-CRM began with a simple observation: most CRM systems were either too complex for small businesses or too basic for growing enterprises.
                   </p>
                   <p>
-                    Our founder, Sarah Johnson, had spent years as a sales director struggling with CRM tools that promised much but delivered little. She envisioned a platform that would be both powerful and intuitive, providing businesses of all sizes with the tools they need to build meaningful customer relationships.
+                    Our founder, PERSON-1, had spent years as a sales director struggling with CRM tools that promised much but delivered little. She envisioned a platform that would be both powerful and intuitive, providing businesses of all sizes with the tools they need to build meaningful customer relationships.
                   </p>
                   <p>
                     Today, Technix-CRM serves thousands of businesses worldwide, from startups to established enterprises. Our platform continues to evolve based on customer feedback and industry trends, always staying true to our mission of making customer relationship management accessible, effective, and even enjoyable.
@@ -114,7 +114,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <p className="text-lg font-semibold">Our headquarters in San Francisco, CA</p>
+                    <p className="text-lg font-semibold">Our headquarters in New Delhi, Delhi</p>
                   </div>
                 </div>
               </motion.div>
