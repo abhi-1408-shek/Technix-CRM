@@ -140,38 +140,20 @@ const Footer = () => {
         
         <hr className="border-gray-700 my-8" />
         
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            &copy; {currentYear} Technix-CRM. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-gray-500 text-sm">&copy; {currentYear} TechnixCRM. All rights reserved.</p>
+          <div className="flex items-center space-x-2 mt-4 md:mt-0">
+            <Heart className="text-red-500 w-4 h-4 animate-pulse" />
+            <span className="text-brand-orange text-base font-semibold tracking-wide">Engineered with <span className='inline-block align-middle'>❤️</span> by Abhishek</span>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center mt-4">
+          <div className="flex space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
             <Link to="/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</Link>
           </div>
         </div>
-        
-        {/* Engineered by Info */}
-        <motion.div 
-          className="mt-8 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <motion.div 
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-gray-800/70 to-gray-900/70 backdrop-blur-sm border border-gray-700/50"
-            whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.2)" }}
-            transition={{ type: "spring", stiffness: 500, damping: 15 }}
-          >
-            <span className="text-gray-300 text-sm mr-2">Engineered with</span>
-            <Heart size={14} className="text-red-500 mx-1 animate-pulse" fill="currentColor" />
-            <span className="text-gray-300 text-sm mr-1">in</span>
-            <span className="text-[#FF9933] font-semibold inline-flex items-center">
-              India
-            </span>
-          </motion.div>
-        </motion.div>
       </div>
     </footer>
   );

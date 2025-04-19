@@ -8,7 +8,7 @@ const testimonials = [
     name: "Person-1",
     role: "Sales Director",
     company: "Tech Solutions India",
-    image: "https://images.unsplash.com/photo-1566492031773-4a4c28761666?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGluZGlhbiUyMGJ1c2luZXNzJTIwcGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80", // Indian business professional
     quote: "After implementing Technix-CRM, our sales team's productivity increased by 45%. The seamless integration with our existing systems and the intuitive UI made adoption across our Delhi offices incredibly smooth."
   },
   {
@@ -152,15 +152,14 @@ const TestimonialsSection = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <img src="https://via.placeholder.com/200x80/F3F4F6/718096?text=TechIndia" alt="TechIndia" className="h-8 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
-            <img src="https://via.placeholder.com/200x80/F3F4F6/718096?text=Bharat+Digital" alt="Bharat Digital" className="h-8 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
-            <img src="https://via.placeholder.com/200x80/F3F4F6/718096?text=InnovateIndia" alt="InnovateIndia" className="h-8 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
-            <img src="https://via.placeholder.com/200x80/F3F4F6/718096?text=NexGen+Solutions" alt="NexGen Solutions" className="h-8 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
+            <img src="https://logo.clearbit.com/tcs.com" alt="Tata Consultancy Services Logo" className="h-24 w-36 object-contain mx-auto bg-white rounded-lg shadow-lg p-4" />
+            <img src="https://logo.clearbit.com/infosys.com" alt="Infosys Logo" className="h-24 w-36 object-contain mx-auto bg-white rounded-lg shadow-lg p-4" />
+            <img src="https://logo.clearbit.com/wipro.com" alt="Wipro Logo" className="h-24 w-36 object-contain mx-auto bg-white rounded-lg shadow-lg p-4" />
+            <img src="https://logo.clearbit.com/hcltech.com" alt="HCL Technologies Logo" className="h-24 w-36 object-contain mx-auto bg-white rounded-lg shadow-lg p-4" />
           </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default TestimonialsSection;

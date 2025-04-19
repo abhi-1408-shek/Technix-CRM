@@ -19,8 +19,8 @@ const Pricing = () => {
     {
       name: "Starter",
       description: "Perfect for small businesses and startups",
-      monthlyPrice: 29,
-      annualPrice: 24,
+      monthlyPrice: 2400, // ₹2,400
+      annualPrice: 2000, // ₹2,000
       features: [
         "Up to 5 team members",
         "Lead management",
@@ -37,8 +37,8 @@ const Pricing = () => {
     {
       name: "Professional",
       description: "Ideal for growing businesses",
-      monthlyPrice: 79,
-      annualPrice: 69,
+      monthlyPrice: 6500, // ₹6,500
+      annualPrice: 5700, // ₹5,700
       features: [
         "Up to 20 team members",
         "All Starter features",
@@ -57,8 +57,8 @@ const Pricing = () => {
     {
       name: "Enterprise",
       description: "For large organizations with complex needs",
-      monthlyPrice: 149,
-      annualPrice: 129,
+      monthlyPrice: 12000, // ₹12,000
+      annualPrice: 10500, // ₹10,500
       features: [
         "Unlimited team members",
         "All Professional features",
@@ -154,7 +154,7 @@ const Pricing = () => {
                     
                     <div className="mb-6">
                       <span className="text-4xl font-bold">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                        ₹{isAnnual ? plan.annualPrice.toLocaleString() : plan.monthlyPrice.toLocaleString()}
                       </span>
                       <span className="text-gray-500 dark:text-gray-400 ml-2">
                         /month {isAnnual && "(billed annually)"}

@@ -140,29 +140,46 @@ const DemoFormSection = () => {
   ];
 
   return (
-    <section id="demo" className="py-20 bg-gradient-to-r from-[#0ea5e9] to-[#1e40af] text-white">
+    <section id="demo" className="py-20 bg-gradient-to-r from-[#0ea5e9] to-[#1e40af] dark:bg-[#18181c] dark:bg-none text-white transition-colors duration-500">
+  {/* Indian-style illustration/banner */}
+  <div className="flex justify-center mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+      alt="Indian business teamwork illustration"
+      className="rounded-2xl shadow-lg w-full max-w-2xl object-cover"
+      style={{ maxHeight: 220 }}
+    />
+  </div>
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center flex items-center justify-center gap-3">
+  Ready to Transform Your Business?
+  <img
+    src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+    alt="Indian Flag"
+    className="inline-block h-7 w-10 rounded shadow"
+    style={{ marginBottom: 4 }}
+  />
+</h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto text-center mb-12">
             Schedule a personalized demo with our product specialists and discover how Technix-CRM can help your business grow in the Indian market.
           </p>
           
-          <div className="bg-white rounded-xl shadow-xl p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Request Your Free Demo</h3>
+          <div className="bg-white dark:bg-[#23232a] rounded-xl shadow-xl p-8 border border-gray-100 dark:border-gray-800 transition-colors duration-500">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Request Your Free Demo</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
+                  <Label htmlFor="name" className="text-gray-700 dark:text-white font-semibold">Full Name *</Label>
                   <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={errors.name ? "border-red-500" : ""}
-                    placeholder="Rajesh Kumar"
-                  />
+  id="name"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  className={`text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 bg-white dark:bg-[#23232a] border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-400 dark:focus:ring-brand-orange transition-colors duration-300 ${errors.name ? 'border-red-500' : ''}`}
+  placeholder="Rajesh Kumar"
+/>
                   {errors.name && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.name}
@@ -171,16 +188,16 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-700">Business Email *</Label>
+                  <Label htmlFor="email" className="text-gray-700 dark:text-white font-semibold">Business Email *</Label>
                   <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={errors.email ? "border-red-500" : ""}
-                    placeholder="rajesh@company.in"
-                  />
+  id="email"
+  name="email"
+  type="email"
+  value={formData.email}
+  onChange={handleChange}
+  className={`text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 bg-white dark:bg-[#23232a] border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-400 dark:focus:ring-brand-orange transition-colors duration-300 ${errors.email ? 'border-red-500' : ''}`}
+  placeholder="rajesh@company.in"
+/>
                   {errors.email && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.email}
@@ -189,15 +206,15 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="company" className="text-gray-700">Company Name *</Label>
+                  <Label htmlFor="company" className="text-gray-700 dark:text-white font-semibold">Company Name *</Label>
                   <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className={errors.company ? "border-red-500" : ""}
-                    placeholder="Innovate Solutions Pvt. Ltd."
-                  />
+  id="company"
+  name="company"
+  value={formData.company}
+  onChange={handleChange}
+  className={`text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 bg-white dark:bg-[#23232a] border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-400 dark:focus:ring-brand-orange transition-colors duration-300 ${errors.company ? 'border-red-500' : ''}`}
+  placeholder="Innovate Solutions Pvt. Ltd."
+/>
                   {errors.company && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.company}
@@ -206,15 +223,15 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="phoneNumber" className="text-gray-700">Phone Number *</Label>
+                  <Label htmlFor="phoneNumber" className="text-gray-700 dark:text-white font-semibold">Phone Number *</Label>
                   <Input
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                    className={errors.phoneNumber ? "border-red-500" : ""}
-                    placeholder="+91 98765 43210"
-                  />
+  id="phoneNumber"
+  name="phoneNumber"
+  value={formData.phoneNumber}
+  onChange={handleChange}
+  className={`text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 bg-white dark:bg-[#23232a] border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-400 dark:focus:ring-brand-orange transition-colors duration-300 ${errors.phoneNumber ? 'border-red-500' : ''}`}
+  placeholder="+91 98765 43210"
+/>
                   {errors.phoneNumber && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.phoneNumber}
@@ -223,7 +240,7 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="companySize" className="text-gray-700">Company Size *</Label>
+                  <Label htmlFor="companySize" className="text-gray-700 dark:text-white font-semibold">Company Size *</Label>
                   <Select onValueChange={(value) => handleSelectChange('companySize', value)} value={formData.companySize}>
                     <SelectTrigger className={errors.companySize ? "border-red-500" : ""}>
                       <SelectValue placeholder="Select company size" />
@@ -244,7 +261,7 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="industry" className="text-gray-700">Industry *</Label>
+                  <Label htmlFor="industry" className="text-gray-700 dark:text-white font-semibold">Industry *</Label>
                   <Select onValueChange={(value) => handleSelectChange('industry', value)} value={formData.industry}>
                     <SelectTrigger className={errors.industry ? "border-red-500" : ""}>
                       <SelectValue placeholder="Select your industry" />
@@ -263,15 +280,15 @@ const DemoFormSection = () => {
                 </div>
                 
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="message" className="text-gray-700">How can we help? *</Label>
+                  <Label htmlFor="message" className="text-gray-700 dark:text-white font-semibold">How can we help? *</Label>
                   <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={`min-h-[120px] ${errors.message ? "border-red-500" : ""}`}
-                    placeholder="Please tell us about your current challenges and what you're looking for in a CRM solution..."
-                  />
+  id="message"
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  className={`min-h-[120px] text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 bg-white dark:bg-[#23232a] border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-400 dark:focus:ring-brand-orange transition-colors duration-300 ${errors.message ? 'border-red-500' : ''}`}
+  placeholder="Please tell us about your current challenges and what you're looking for in a CRM solution..."
+/>
                   {errors.message && (
                     <p className="text-red-500 text-sm flex items-center mt-1">
                       <AlertCircle className="w-4 h-4 mr-1" /> {errors.message}
