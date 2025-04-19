@@ -88,7 +88,7 @@
     <br>Zustand
   </td>
   <td align="center" width="96">
-    <img src="https://framerusercontent.com/images/48ha9ZR9oZQGQ6gZ8YUfElP3T0.png" alt="Framer" width="48" height="48" />
+    <img src="https://img.shields.io/badge/-Framer-black?style=flat-square&logo=framer&logoColor=blue" alt="Framer" width="48" height="48" />
     <br>Framer
   </td>
   <td align="center" width="96">
@@ -96,7 +96,7 @@
     <br>TanStack
   </td>
   <td align="center" width="96">
-    <img src="https://api.iconify.design/logos/recharts.svg" alt="Recharts" width="48" height="48" />
+    <img src="https://img.shields.io/badge/-Recharts-22B5BF?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48bGluZSB4MT0iNCIgeTE9IjIwIiB4Mj0iMjAiIHkyPSI0Ii8+PGxpbmUgeDE9IjQiIHkxPSI0IiB4Mj0iNCIgeTI9IjIwIi8+PGxpbmUgeDE9IjQiIHkxPSIyMCIgeDI9IjIwIiB5Mj0iMjAiLz48L3N2Zz4=" alt="Recharts" width="48" height="48" />
     <br>Recharts
   </td>
   <td align="center" width="96">
@@ -122,11 +122,6 @@
   </td>
 </tr>
 <tr>
-  <td>
-    <img src="https://img.shields.io/badge/🤖_AI_Powered-Smart_Insights-FF5252?style=for-the-badge" alt="AI" />
-    <br>
-    Advanced analytics & predictive sales
-  </td>
   <td>
     <img src="https://img.shields.io/badge/🔄_Automation-Visual_Workflows-00C2E0?style=for-the-badge" alt="Automation" />
     <br>
