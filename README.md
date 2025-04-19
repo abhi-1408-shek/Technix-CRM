@@ -111,7 +111,7 @@
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/yourusername/technix-crm.git
+   git clone https://github.com/abhi-1408-shek/Technix-CRM.git
    cd technix-crm
    \`\`\`
 
@@ -157,7 +157,7 @@
   - Communication history
   - Follow-up automation
 
-## 💡 Future Enhancements
+## 💡 Future Enhancements(Probabaly after winning finals)
 
 - [ ] AI-powered lead scoring
 - [ ] Advanced analytics dashboard
@@ -175,19 +175,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌐 Links
 
-- [Website](https://technix-crm.com)
-- [Documentation](https://docs.technix-crm.com)
-- [Blog](https://blog.technix-crm.com)
+- [Website](https://technix-crm.netlify.app)
+- [Documentation](https://technix-crm.netlify.app/resources)
+- [Blog](https://technix-crm.netlify.app/resources/blog)
 
 ## 💫 Support
 
-<a href="https://www.buymeacoffee.com/yourusername">
+<a href="https://buymeacoffee.com/abhigcet">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150">
 </a>
 
 ---
 
 <div align="center">
-  Made with ❤️ by <a href="https://github.com/yourusername">Abhishek</a>
+  Made with ❤️ by <a href="https://github.com/abhi-1408-shek">Abhishek</a>
 </div>
 
